@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+	</head>
+	<body>
+		<!-- page heder -->
+		<header id="site-header">
+			<div class="logo">
+				<img src="images/logo.svg" alt="snap" />
+			</div>
+			<!-- button to open sider menu hidden in large screens -->
+			<button class="menu-open">
+				<img src="images/icon-menu.svg" alt="open menu" />
+			</button>
+			<!-- slider menu mobile view -->
+			<div class="menu">
+				<!-- button to closse sider menu hidden in large screens -->
+				<button class="menu-close">
+					<img src="images/icon-close-menu.svg" alt=" close menu" />
+				</button>
+				<nav>
+					<ul class="nav-list">
+						<li class="nav-item">
+							<button class="drop-down-button">
+								Features <img src="images/icon-arrow-down.svg" alt="" />
+							</button>
+							<!-- drop down menu #1 -->
+							<ul class="drop-down-list">
+								<li class="drop-down-item">
+									<a href="#"
+										><img src="images/icon-todo.svg" alt="" />
+										<span>Todo List</span></a
+									>
+								</li>
+								<li class="drop-down-item">
+									<a href="#">
+										<img src="images/icon-calendar.svg" alt="" />
+										<span>Calendar</span></a
+									>
+								</li>
+								<li class="drop-down-item">
+									<a href="#">
+										<img src="images/icon-reminders.svg" alt="" />
+										<span>Riminders</span></a
+									>
+								</li>
+								<li class="drop-down-item">
+									<a href="#">
+										<img src="images/icon-planning.svg" alt="" />
+										<span>Planning</span></a
+									>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<button class="drop-down-button">
+								Company <img src="images/icon-arrow-down.svg" alt="" />
+							</button>
+							<!-- drop down menu #2 -->
+							<ul class="drop-down-list">
+								<li class="drop-down-item"><a href="#">History</a></li>
+								<li class="drop-down-item"><a href="#">Our Team</a></li>
+								<li class="drop-down-item"><a href="#">Blog</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Careers</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- rigistration list -->
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="#">Login</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="btn btn-light">Register</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- page main -->
+		<main>
+			<section class="intro-info">
+				<h1><span>Make</span> remote work</h1>
+				<p>
+					Get your team in sync, no matter your location. Streamline processes,
+					create team rituals, and watch productivity soar.
+				</p>
+				<a href="#" class="btn btn-dark"> Learn more </a>
+				<footer class="intro-footer sponsors">
+					<div><img src="images/client-databiz.svg" alt="databiz" /></div>
+					<div><img src="images/client-audiophile.svg" alt="audiophile" /></div>
+					<div><img src="images/client-meet.svg" alt="meet" /></div>
+					<div><img src="images/client-maker.svg" alt="maker" /></div>
+				</footer>
+			</section>
+			<div class="intro-illisturation">
+				<picture>
+					<source
+						srcset="/images/image-hero-desktop.png"
+						media="(min-width: 40em)"
+					/>
+					<source srcset="/images/image-hero-mobile.png" />
+
+					<img src="/images/image-hero-desktop.png" alt="man holding laptop" />
+				</picture>
+			</div>
+		</main>
+	</body>
+</html>
