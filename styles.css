@@ -1,0 +1,220 @@
+/* resets  */
+
+*,
+*::after,
+*:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* reset font size to be 1rem = 10px */
+	font-size: 62.5%;
+	/* font smothing */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+img,
+picture {
+	display: block;
+	max-width: 100%;
+	object-fit: cover;
+}
+button {
+	display: block;
+	border: 0;
+	background-color: transparent;
+	font-size: inherit;
+	cursor: pointer;
+	color: inherit;
+}
+li,
+ul {
+	list-style: none;
+}
+/* custom properties */
+
+:root {
+	/* colors */
+	--almost-white: hsl(0, 0%, 98%);
+	--med-gray: hsl(0, 0%, 41%);
+	--almost-black: hsl(0, 0%, 8%);
+}
+/* body setup */
+body {
+	min-height: 100vh;
+	font-family: 'Epilogue', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	background-color: var(--almost-white);
+	line-height: 1.5;
+}
+
+/* utilities */
+
+.container {
+	max-width: 144rem;
+	margin: 0 auto;
+}
+
+.flow > * + * {
+	margin-top: var(--column-gap);
+}
+/* component */
+.btn {
+	display: block;
+	padding: 0.8em;
+}
+
+.btn-light,
+.btn-dark {
+	border: 2px solid var(--med-gray);
+	border-radius: 15px;
+}
+
+.btn-dark {
+	border-color: var(--almost-black);
+	background-color: var(--almost-black);
+	color: #fff;
+	text-decoration: none;
+}
+
+/* header & nav */
+
+#site-header {
+	display: flex;
+	padding: 2rem;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.logo {
+	max-width: 7rem;
+}
+
+.menu {
+	position: fixed;
+	background-color: #fff;
+	color: var(--med-gray);
+	top: 0;
+	right: 0;
+	width: 65vw;
+	height: 100vh;
+	padding: 0 2rem;
+	font-size: 1.5rem;
+	z-index: -1;
+	transform: translateX(100%);
+	opacity: 0;
+}
+
+.menu.open {
+	z-index: 10;
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.menu-close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+.nav-list ul {
+	margin-top: var(--column-gap);
+	padding-left: 1.2em;
+}
+
+.menu a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	padding: 0.8em;
+}
+.drop-down-item a {
+	display: flex;
+}
+
+.drop-down-item a span {
+	display: block;
+}
+.drop-down-item img {
+	margin-right: 1em;
+	height: 100%;
+}
+
+.drop-down-button {
+	display: flex;
+	align-items: center;
+	padding: 0.8em;
+}
+.drop-down-button span:nth-child(2) {
+	margin-left: 1em;
+}
+.menu nav {
+	margin: min(20vh, 8rem) 0 min(5vh, 1rem);
+}
+
+.registeration-list {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.overlay {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	transform: translateX(100%);
+	opacity: 0;
+}
+.menu.open + .overlay {
+	z-index: 9;
+	transform: translateX(0);
+	opacity: 1;
+}
+
+/* body section */
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+.intro-illisturation {
+	order: 1;
+}
+.intro-info {
+	order: 2;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.intro-info h1 {
+	font-size: 3.5rem;
+	line-height: 1.1;
+}
+.intro-info p {
+	color: var(--med-gray);
+	margin-bottom: 1.1rem;
+}
+
+.intro-info .btn {
+	padding: 0.5em 1.5em;
+}
+.intro-footer {
+	display: flex;
+	gap: 3rem;
+	justify-content: space-between;
+	margin-top: 4.5rem;
+}
