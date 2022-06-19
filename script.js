@@ -13,6 +13,7 @@ overlay.addEventListener('click', mobileNav);
 dropdownButtons.forEach((button) => {
 	button.addEventListener('click', dropDownMobile);
 });
+document.addEventListener('click', closeAllDropDownMenu);
 
 //controle silder menu in mobile view
 function mobileNav(e) {
@@ -25,6 +26,8 @@ function dropDownMobile(e) {
 	 * @type {HTMLButtonElement}
 	 */
 	const whichButton = e.currentTarget;
+	// stop event popagation to prevent call closeAllDropDownMenu function on document
+	e.stopPropagation();
 	// check if current button is already opened then exit execution
 	if (whichButton.nextElementSibling.classList.contains('open')) {
 		closeAllDropDownMenu();
