@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github link](https://github.com/Hamdyshabeeb/Introsection-with-dropdown-menu)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [vercl live link](https://introsection-with-dropdown-menu.vercel.app/)
 
 ## My process
 
